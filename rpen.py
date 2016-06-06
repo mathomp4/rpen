@@ -20,7 +20,7 @@ parser = OptionParser()
 colors = [
     ('red','01;31'),
     ('green','01;32'),
-    ('yellow','01;33'),
+    ('yellow','07;93'),
     ('blue','01;34'),
     ('purple','0;35'),
     ('magenta','01;35'),
