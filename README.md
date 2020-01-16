@@ -1,41 +1,64 @@
 rpen
 ====
 
-rpen (Red Pencil) is a comandline text highlighter based on egrep
+rpen - red pencil, is a simple multicolor comandline text high lighter.
 
-Requirements:
--------------
+![Example](/images/rpen1.png)
+
+
+Requirements
+------------
 
 * Python 2.5 or higher
 * egrep or grep 
 
-Installation:
--------------
-* download rpen
-* mv rpen.py rpen
-* cp rpen /usr/local/bin/
-* chmod 777 /usr/local/bin/rpen (systemwide)
+Installation
+------------
 
-Examples:
----------
-<code>
-$ cat /foo/bar | rpen searchstring1 searchstring2 .. 
-</code>
+```bash
+git clone https://github.com/rtulke/rpen.git
+cp rpen/rpen.py /usr/local/bin/rpen
+chmod 777 /usr/local/bin/rpen (systemwide)
+```
 
-or try less with RAW mode
+Usage
+-----
 
-<code>
-$ cat /foo/bar | rpen searchstring1 searchstring2 .. | less -R 
-</code>
+```
+$ rpen
+Usage: cat logfile | rpen [options] searchterm1 searchterm2...
+
+Options:
+  -h, --help  show this help message and exit
+  -i          perform a case insensitive search
+  -k          only highlight, do not filter
+ ````
+
+Examples
+--------
+
+```bash
+cat /foo/bar | rpen searchstring1 searchstring2 .. 
+```
+
+or try less with RAW mode:
+
+```bash
+cat /foo/bar | rpen searchstring1 searchstring2 .. | less -R 
+```
 
 rpen with regex:
 
-<code>
-$ cat /foo/bar | rpen ^.*[04]
-</code>
+```bash
+cat /foo/bar | rpen ^.*[04]
+```
 
 highlight whole line:
 
-<code>
-$ cat /foo/bar | rpen ^.\*searchstring\*.$
-</code>
+```bash
+cat /foo/bar | rpen ^.\*searchstring\*.$
+```
+
+```bash
+cat /foo/bar | rpen -i Searchstring1 searchString2 .. | less -R 
+```
