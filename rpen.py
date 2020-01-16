@@ -22,13 +22,13 @@ parser.add_option("-k", action="store_true", dest="display_all", default=False, 
 (options, args) = parser.parse_args()
 
 colors = [
-    ('green','04;01;32'),
-    ('yellow','04;01;33'),
-    ('red','04;01;31'),
-    ('blue','04;01;34'),
+    ('green','00;01;32'),
+    ('yellow','00;07;93'),
+    ('red','00;01;31'),
+    ('blue','00;01;34'),
     ('purple','0;04;35'),
-    ('magenta','04;01;35'),
-    ('cyan','04;01;36'),
+    ('magenta','00;01;35'),
+    ('cyan','00;01;36'),
     ('brown','0;04;33'),
     ]
 
